@@ -15,13 +15,15 @@
 		24757E0D18D593CD006D2D16 /* AKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 24757E0C18D593CD006D2D16 /* AKAppDelegate.m */; };
 		24757E1018D593CD006D2D16 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24757E0E18D593CD006D2D16 /* Main_iPhone.storyboard */; };
 		24757E1318D593CD006D2D16 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24757E1118D593CD006D2D16 /* Main_iPad.storyboard */; };
-		24757E1618D593CD006D2D16 /* AKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24757E1518D593CD006D2D16 /* AKViewController.m */; };
+		24757E1618D593CD006D2D16 /* AKAddContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24757E1518D593CD006D2D16 /* AKAddContactViewController.m */; };
 		24757E1818D593CD006D2D16 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24757E1718D593CD006D2D16 /* Images.xcassets */; };
 		24757E1F18D593CD006D2D16 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24757E1E18D593CD006D2D16 /* XCTest.framework */; };
 		24757E2018D593CD006D2D16 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24757DFC18D593CD006D2D16 /* Foundation.framework */; };
 		24757E2118D593CD006D2D16 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24757E0018D593CD006D2D16 /* UIKit.framework */; };
 		24757E2918D593CD006D2D16 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 24757E2718D593CD006D2D16 /* InfoPlist.strings */; };
 		24757E2B18D593CD006D2D16 /* AddContactTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 24757E2A18D593CD006D2D16 /* AddContactTests.m */; };
+		24757E3818D59605006D2D16 /* JVFloatLabeledTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 24757E3518D59605006D2D16 /* JVFloatLabeledTextField.m */; };
+		24757E3918D59605006D2D16 /* JVFloatLabeledTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24757E3718D59605006D2D16 /* JVFloatLabeledTextView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,14 +49,18 @@
 		24757E0C18D593CD006D2D16 /* AKAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AKAppDelegate.m; sourceTree = "<group>"; };
 		24757E0F18D593CD006D2D16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		24757E1218D593CD006D2D16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		24757E1418D593CD006D2D16 /* AKViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AKViewController.h; sourceTree = "<group>"; };
-		24757E1518D593CD006D2D16 /* AKViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AKViewController.m; sourceTree = "<group>"; };
+		24757E1418D593CD006D2D16 /* AKAddContactViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AKAddContactViewController.h; sourceTree = "<group>"; };
+		24757E1518D593CD006D2D16 /* AKAddContactViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AKAddContactViewController.m; sourceTree = "<group>"; };
 		24757E1718D593CD006D2D16 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		24757E1D18D593CD006D2D16 /* AddContactTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AddContactTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		24757E1E18D593CD006D2D16 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		24757E2618D593CD006D2D16 /* AddContactTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AddContactTests-Info.plist"; sourceTree = "<group>"; };
 		24757E2818D593CD006D2D16 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		24757E2A18D593CD006D2D16 /* AddContactTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddContactTests.m; sourceTree = "<group>"; };
+		24757E3418D59605006D2D16 /* JVFloatLabeledTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JVFloatLabeledTextField.h; sourceTree = "<group>"; };
+		24757E3518D59605006D2D16 /* JVFloatLabeledTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JVFloatLabeledTextField.m; sourceTree = "<group>"; };
+		24757E3618D59605006D2D16 /* JVFloatLabeledTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JVFloatLabeledTextView.h; sourceTree = "<group>"; };
+		24757E3718D59605006D2D16 /* JVFloatLabeledTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JVFloatLabeledTextView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,10 +122,11 @@
 			children = (
 				24757E0B18D593CD006D2D16 /* AKAppDelegate.h */,
 				24757E0C18D593CD006D2D16 /* AKAppDelegate.m */,
+				24757E3A18D5960E006D2D16 /* CustomizedTextView */,
 				24757E0E18D593CD006D2D16 /* Main_iPhone.storyboard */,
 				24757E1118D593CD006D2D16 /* Main_iPad.storyboard */,
-				24757E1418D593CD006D2D16 /* AKViewController.h */,
-				24757E1518D593CD006D2D16 /* AKViewController.m */,
+				24757E1418D593CD006D2D16 /* AKAddContactViewController.h */,
+				24757E1518D593CD006D2D16 /* AKAddContactViewController.m */,
 				24757E1718D593CD006D2D16 /* Images.xcassets */,
 				24757E0318D593CD006D2D16 /* Supporting Files */,
 			);
@@ -153,6 +160,17 @@
 				24757E2718D593CD006D2D16 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		24757E3A18D5960E006D2D16 /* CustomizedTextView */ = {
+			isa = PBXGroup;
+			children = (
+				24757E3418D59605006D2D16 /* JVFloatLabeledTextField.h */,
+				24757E3518D59605006D2D16 /* JVFloatLabeledTextField.m */,
+				24757E3618D59605006D2D16 /* JVFloatLabeledTextView.h */,
+				24757E3718D59605006D2D16 /* JVFloatLabeledTextView.m */,
+			);
+			name = CustomizedTextView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,9 +272,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24757E3818D59605006D2D16 /* JVFloatLabeledTextField.m in Sources */,
 				24757E0D18D593CD006D2D16 /* AKAppDelegate.m in Sources */,
-				24757E1618D593CD006D2D16 /* AKViewController.m in Sources */,
+				24757E1618D593CD006D2D16 /* AKAddContactViewController.m in Sources */,
 				24757E0918D593CD006D2D16 /* main.m in Sources */,
+				24757E3918D59605006D2D16 /* JVFloatLabeledTextView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,12 +7,15 @@
 //
 
 #import "AKAppDelegate.h"
+#import "AKAddContactViewController.h"
 
 @implementation AKAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    UINavigationController *root = (UINavigationController *)self.window.rootViewController;
+    AKAddContactViewController *addContactViewController = (AKAddContactViewController *)root.topViewController;
+    addContactViewController.contents = [NSArray arrayWithObjects:@"Ania", @"Kourtessi", @"IOS Developer", @"0176 12345678", nil];
     return YES;
 }
 							
