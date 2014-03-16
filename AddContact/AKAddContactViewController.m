@@ -1,5 +1,5 @@
 //
-//  AKViewController.m
+//  AKAddContactViewController.m
 //  AddContact
 //
 //  Created by Kourtessia on 16.03.14.
@@ -18,7 +18,7 @@ static NSString *reuseIdentifier = CELL_REUSE_IDENTIFIER;
 #pragma mark - EditableListViewController
 
 @interface AKAddContactViewController () <UITextFieldDelegate> {
-    NSMutableArray *rowsContent;
+    NSMutableArray *contactDetails;
 }
 @end
 
@@ -49,24 +49,22 @@ static NSString *reuseIdentifier = CELL_REUSE_IDENTIFIER;
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Contents Assignment
+#pragma mark - Rows Assignment
 
 - (NSArray *)contents
 {
-    return rowsContent;
+    return contactDetails;
 }
 
 - (void)contentsDidChange
 {
+     // do nothing...
 }
 
 - (void)setContents:(NSArray *)contents
 {
-    
-    rowsContent = [NSMutableArray arrayWithArray:contents];
+    contactDetails = [NSMutableArray arrayWithArray:contents];
     [self.tableView reloadData];
-    
-    
 }
 
 #pragma mark - Table Changes
@@ -88,7 +86,7 @@ static NSString *reuseIdentifier = CELL_REUSE_IDENTIFIER;
 - (void)deleteRow:(NSIndexPath *)indexPath
 {
     [self removeCachedSubviewsRow];
-    [rowsContent removeObjectAtIndex:indexPath.row];
+    [contactDetails removeObjectAtIndex:indexPath.row];
     [self.tableView beginUpdates];
     [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
     [self.tableView endUpdates];
@@ -99,11 +97,11 @@ static NSString *reuseIdentifier = CELL_REUSE_IDENTIFIER;
 {
     [self removeCachedSubviewsRow];
     
-    if (rowsContent == nil) {
-        rowsContent = [[NSMutableArray alloc] initWithCapacity:1];
+    if (contactDetails == nil) {
+        contactDetails = [[NSMutableArray alloc] initWithCapacity:1];
     }
     
-    [rowsContent addObject:text];
+    [contactDetails addObject:text];
     NSIndexPath *nextRow = [NSIndexPath indexPathForRow:indexPath.row+1 inSection:indexPath.section];
     [self.tableView beginUpdates];
     
@@ -117,7 +115,7 @@ static NSString *reuseIdentifier = CELL_REUSE_IDENTIFIER;
 
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if ((indexPath.row > 3) && (indexPath.row < rowsContent.count))
+    if ((indexPath.row > 3) && (indexPath.row < contactDetails.count))
         return 123.0;
     else if (indexPath.row < 2)
         return 80.0;
@@ -181,8 +179,8 @@ static NSString *reuseIdentifier = CELL_REUSE_IDENTIFIER;
     
     JVFloatLabeledTextField *staatField = [self createTextFieldForFrame:&frameStaat withText:NSLocalizedString(@"Country", @"")];
     
-    CGRect divHorizFrame = CGRectMake(kJVFieldHMargin,  // Breite ab...
-                                      topOffset, // Höhe ab...
+    CGRect divHorizFrame = CGRectMake(kJVFieldHMargin,  // Breite
+                                      topOffset, // Höhe
                                       1.0f,
                                       123.0f);
     UIView *divHoriz = [self createDivForFrame:&divHorizFrame];
@@ -239,25 +237,9 @@ static NSString *reuseIdentifier = CELL_REUSE_IDENTIFIER;
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return rowsContent.count + 1; // inserting new row
+    return contactDetails.count + 1; // inserting new row
 }
 
-- (UITextField *)createTextFieldForCell:(UITableViewCell *)cell
-{
-    CGFloat padding = 8.0f;
-    CGRect frame = CGRectInset(cell.contentView.bounds, padding, padding / 2);
-
-    UITextField *textField = [[UITextField alloc] initWithFrame:frame];
-    CGFloat spareHeight = cell.contentView.bounds.size.height - textField.font.pointSize;
-    frame.origin.y = self.tableView.style == UITableViewStyleGrouped ? spareHeight / 2 : spareHeight - padding/2;
-    textField.frame = frame;
-    textField.tag = TAG_TEXT_FIELD;
-    textField.borderStyle = UITextBorderStyleNone;
-    textField.returnKeyType = UIReturnKeyDone;
-    textField.autocapitalizationType = UITextAutocapitalizationTypeSentences;
-    textField.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
-    return textField;
-}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -271,19 +253,16 @@ static NSString *reuseIdentifier = CELL_REUSE_IDENTIFIER;
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseIdentifier];
     }
     
-    UITextField *textField = (UITextField *)[cell viewWithTag:TAG_TEXT_FIELD];
+    UITextField *textField = (UITextField *)[cell viewWithTag:CELL_TAG];
     if (textField == nil) {
-        textField = [self createTextFieldForCell:cell];
         [cell.contentView addSubview:textField];
         
     }
-
-    
     textField.delegate = self;
     
-    if (indexPath.row < rowsContent.count)
+    if (indexPath.row < contactDetails.count)
     {
-        textField.text = [rowsContent objectAtIndex:indexPath.row];
+        textField.text = [contactDetails objectAtIndex:indexPath.row];
         textField.placeholder = nil;
         if ([textField.text isEqualToString:@"Privat"]
             || [textField.text isEqualToString:@"Arbeit"]
@@ -334,9 +313,7 @@ static NSString *reuseIdentifier = CELL_REUSE_IDENTIFIER;
 {
     if (indexPath.row < 4)
     return UITableViewCellEditingStyleNone;
-    //    if ([indexPath.row textField.placeholder length] != 0) {
-    //        return UITableViewCellEditingStyleInsert;    }
-    return indexPath.row < rowsContent.count ? UITableViewCellEditingStyleDelete : UITableViewCellEditingStyleInsert;
+    return indexPath.row < contactDetails.count ? UITableViewCellEditingStyleDelete : UITableViewCellEditingStyleInsert;
 }
 
 - (NSIndexPath *)tableView:(UITableView *)tableView
@@ -345,9 +322,9 @@ targetIndexPathForMoveFromRowAtIndexPath:(NSIndexPath *)sourceIndexPath
 {
     return
     proposedDestinationIndexPath.section == 0
-    && proposedDestinationIndexPath.row < rowsContent.count
+    && proposedDestinationIndexPath.row < contactDetails.count
     ? proposedDestinationIndexPath
-    : [NSIndexPath indexPathForRow:rowsContent.count-1 inSection:0];
+    : [NSIndexPath indexPathForRow:contactDetails.count-1 inSection:0];
 }
 
 
@@ -378,7 +355,6 @@ targetIndexPathForMoveFromRowAtIndexPath:(NSIndexPath *)sourceIndexPath
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
-    //damit wird eine neue Zeile mit StyleDelete hinzugefügt..
 	[textField resignFirstResponder];
 	return YES;
 }
@@ -386,15 +362,6 @@ targetIndexPathForMoveFromRowAtIndexPath:(NSIndexPath *)sourceIndexPath
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
         return NO;
-}
-
-- (BOOL)textFieldShouldClear:(UITextField *)textField
-{
-//    if (textField.returnKeyType == UIReturnKeyNext) {
-//    [textField changeReturnKey:UIReturnKeyDone];
-//    }
-    
-    return NO;
 }
 
 - (void)setEditing:(BOOL)editing animated:(BOOL)animated {
@@ -417,7 +384,6 @@ targetIndexPathForMoveFromRowAtIndexPath:(NSIndexPath *)sourceIndexPath
     // Zelle nicht editierbar
     if ([textField.placeholder isEqualToString:NSLocalizedString(@"Adresse hinzufügen", nil)])
     {
-  
         if (currRow.row == 4)
             [self addRow:currRow text:@"Privat"];
         if (currRow.row == 5)
