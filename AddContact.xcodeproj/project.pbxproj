@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24684F9F18D77D93008CD806 /* AddAddressDetail.png in Resources */ = {isa = PBXBuildFile; fileRef = 24684F9D18D77D93008CD806 /* AddAddressDetail.png */; };
+		24684FA018D77D93008CD806 /* Detail1.png in Resources */ = {isa = PBXBuildFile; fileRef = 24684F9E18D77D93008CD806 /* Detail1.png */; };
 		24757DFD18D593CD006D2D16 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24757DFC18D593CD006D2D16 /* Foundation.framework */; };
 		24757DFF18D593CD006D2D16 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24757DFE18D593CD006D2D16 /* CoreGraphics.framework */; };
 		24757E0118D593CD006D2D16 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24757E0018D593CD006D2D16 /* UIKit.framework */; };
@@ -37,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		24684F9D18D77D93008CD806 /* AddAddressDetail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AddAddressDetail.png; sourceTree = "<group>"; };
+		24684F9E18D77D93008CD806 /* Detail1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Detail1.png; sourceTree = "<group>"; };
 		24757DF918D593CD006D2D16 /* AddContact.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AddContact.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24757DFC18D593CD006D2D16 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		24757DFE18D593CD006D2D16 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -87,6 +91,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		24684FA118D77D9E008CD806 /* Templates */ = {
+			isa = PBXGroup;
+			children = (
+				24684F9D18D77D93008CD806 /* AddAddressDetail.png */,
+				24684F9E18D77D93008CD806 /* Detail1.png */,
+			);
+			name = Templates;
+			sourceTree = "<group>";
+		};
 		24757DF018D593CD006D2D16 = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +133,7 @@
 		24757E0218D593CD006D2D16 /* AddContact */ = {
 			isa = PBXGroup;
 			children = (
+				24684FA118D77D9E008CD806 /* Templates */,
 				24757E0B18D593CD006D2D16 /* AKAppDelegate.h */,
 				24757E0C18D593CD006D2D16 /* AKAppDelegate.m */,
 				24757E3A18D5960E006D2D16 /* CustomizedTextView */,
@@ -250,6 +264,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24684FA018D77D93008CD806 /* Detail1.png in Resources */,
+				24684F9F18D77D93008CD806 /* AddAddressDetail.png in Resources */,
 				24757E1318D593CD006D2D16 /* Main_iPad.storyboard in Resources */,
 				24757E1818D593CD006D2D16 /* Images.xcassets in Resources */,
 				24757E1018D593CD006D2D16 /* Main_iPhone.storyboard in Resources */,
@@ -491,6 +507,7 @@
 				24757E3018D593CD006D2D16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		24757E3118D593CD006D2D16 /* Build configuration list for PBXNativeTarget "AddContactTests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +516,7 @@
 				24757E3318D593CD006D2D16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
