@@ -3,7 +3,7 @@
 //  AddContact
 //
 //  The MIT License (MIT)
-//  Created by Kourtessia on 16.03.14.
+//  Created by Anna Maria Kourtessi on 16.03.14.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy of
 //  this software and associated documentation files (the "Software"), to deal in
