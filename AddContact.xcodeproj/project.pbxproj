@@ -10,6 +10,7 @@
 		24684FA418D786C3008CD806 /* Detail1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 24684FA218D786C3008CD806 /* Detail1.jpg */; };
 		24684FA518D786C3008CD806 /* AddAddressDetail.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 24684FA318D786C3008CD806 /* AddAddressDetail.jpg */; };
 		24684FA718DA3066008CD806 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 24684FA618DA3066008CD806 /* index.html */; };
+		24684FA918DA350E008CD806 /* google753fec74321f9e63 (1).html in Resources */ = {isa = PBXBuildFile; fileRef = 24684FA818DA350D008CD806 /* google753fec74321f9e63 (1).html */; };
 		24757DFD18D593CD006D2D16 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24757DFC18D593CD006D2D16 /* Foundation.framework */; };
 		24757DFF18D593CD006D2D16 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24757DFE18D593CD006D2D16 /* CoreGraphics.framework */; };
 		24757E0118D593CD006D2D16 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24757E0018D593CD006D2D16 /* UIKit.framework */; };
@@ -43,6 +44,7 @@
 		24684FA218D786C3008CD806 /* Detail1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Detail1.jpg; sourceTree = "<group>"; };
 		24684FA318D786C3008CD806 /* AddAddressDetail.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = AddAddressDetail.jpg; sourceTree = "<group>"; };
 		24684FA618DA3066008CD806 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = index.html; path = ../index.html; sourceTree = "<group>"; };
+		24684FA818DA350D008CD806 /* google753fec74321f9e63 (1).html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "google753fec74321f9e63 (1).html"; sourceTree = "<group>"; };
 		24757DF918D593CD006D2D16 /* AddContact.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AddContact.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24757DFC18D593CD006D2D16 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		24757DFE18D593CD006D2D16 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -105,6 +107,7 @@
 		24757DF018D593CD006D2D16 = {
 			isa = PBXGroup;
 			children = (
+				24684FA818DA350D008CD806 /* google753fec74321f9e63 (1).html */,
 				24757E0218D593CD006D2D16 /* AddContact */,
 				24757E2418D593CD006D2D16 /* AddContactTests */,
 				24757DFB18D593CD006D2D16 /* Frameworks */,
@@ -271,6 +274,7 @@
 				24757E1818D593CD006D2D16 /* Images.xcassets in Resources */,
 				24684FA418D786C3008CD806 /* Detail1.jpg in Resources */,
 				24684FA718DA3066008CD806 /* index.html in Resources */,
+				24684FA918DA350E008CD806 /* google753fec74321f9e63 (1).html in Resources */,
 				24684FA518D786C3008CD806 /* AddAddressDetail.jpg in Resources */,
 				24757E1018D593CD006D2D16 /* Main_iPhone.storyboard in Resources */,
 				24757E0718D593CD006D2D16 /* InfoPlist.strings in Resources */,
