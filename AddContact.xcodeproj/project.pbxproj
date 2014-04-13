@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		24684FA418D786C3008CD806 /* Detail1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 24684FA218D786C3008CD806 /* Detail1.jpg */; };
-		24684FA518D786C3008CD806 /* AddAddressDetail.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 24684FA318D786C3008CD806 /* AddAddressDetail.jpg */; };
 		24757DFD18D593CD006D2D16 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24757DFC18D593CD006D2D16 /* Foundation.framework */; };
 		24757DFF18D593CD006D2D16 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24757DFE18D593CD006D2D16 /* CoreGraphics.framework */; };
 		24757E0118D593CD006D2D16 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24757E0018D593CD006D2D16 /* UIKit.framework */; };
@@ -26,6 +24,8 @@
 		24757E2B18D593CD006D2D16 /* AddContactTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 24757E2A18D593CD006D2D16 /* AddContactTests.m */; };
 		24757E3818D59605006D2D16 /* JVFloatLabeledTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 24757E3518D59605006D2D16 /* JVFloatLabeledTextField.m */; };
 		24757E3918D59605006D2D16 /* JVFloatLabeledTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24757E3718D59605006D2D16 /* JVFloatLabeledTextView.m */; };
+		24CC8C4818FACF590000181C /* AddAddressBookDetail.png in Resources */ = {isa = PBXBuildFile; fileRef = 24CC8C4718FACF590000181C /* AddAddressBookDetail.png */; };
+		24CC8C4C18FACFF80000181C /* ShowAddressDetail.png in Resources */ = {isa = PBXBuildFile; fileRef = 24CC8C4B18FACFF80000181C /* ShowAddressDetail.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +39,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		24684FA218D786C3008CD806 /* Detail1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Detail1.jpg; sourceTree = "<group>"; };
-		24684FA318D786C3008CD806 /* AddAddressDetail.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = AddAddressDetail.jpg; sourceTree = "<group>"; };
 		24757DF918D593CD006D2D16 /* AddContact.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AddContact.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24757DFC18D593CD006D2D16 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		24757DFE18D593CD006D2D16 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -65,6 +63,8 @@
 		24757E3518D59605006D2D16 /* JVFloatLabeledTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JVFloatLabeledTextField.m; sourceTree = "<group>"; };
 		24757E3618D59605006D2D16 /* JVFloatLabeledTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JVFloatLabeledTextView.h; sourceTree = "<group>"; };
 		24757E3718D59605006D2D16 /* JVFloatLabeledTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JVFloatLabeledTextView.m; sourceTree = "<group>"; };
+		24CC8C4718FACF590000181C /* AddAddressBookDetail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AddAddressBookDetail.png; sourceTree = "<group>"; };
+		24CC8C4B18FACFF80000181C /* ShowAddressDetail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ShowAddressDetail.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,15 +91,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		24684FA118D77D9E008CD806 /* Templates */ = {
-			isa = PBXGroup;
-			children = (
-				24684FA218D786C3008CD806 /* Detail1.jpg */,
-				24684FA318D786C3008CD806 /* AddAddressDetail.jpg */,
-			);
-			name = Templates;
-			sourceTree = "<group>";
-		};
 		24757DF018D593CD006D2D16 = {
 			isa = PBXGroup;
 			children = (
@@ -133,7 +124,7 @@
 		24757E0218D593CD006D2D16 /* AddContact */ = {
 			isa = PBXGroup;
 			children = (
-				24684FA118D77D9E008CD806 /* Templates */,
+				24CC8C4D18FAD0010000181C /* Images */,
 				24757E0B18D593CD006D2D16 /* AKAppDelegate.h */,
 				24757E0C18D593CD006D2D16 /* AKAppDelegate.m */,
 				24757E3A18D5960E006D2D16 /* CustomizedTextView */,
@@ -185,6 +176,15 @@
 				24757E3718D59605006D2D16 /* JVFloatLabeledTextView.m */,
 			);
 			name = CustomizedTextView;
+			sourceTree = "<group>";
+		};
+		24CC8C4D18FAD0010000181C /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				24CC8C4B18FACFF80000181C /* ShowAddressDetail.png */,
+				24CC8C4718FACF590000181C /* AddAddressBookDetail.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,10 +266,10 @@
 			files = (
 				24757E1318D593CD006D2D16 /* Main_iPad.storyboard in Resources */,
 				24757E1818D593CD006D2D16 /* Images.xcassets in Resources */,
-				24684FA418D786C3008CD806 /* Detail1.jpg in Resources */,
-				24684FA518D786C3008CD806 /* AddAddressDetail.jpg in Resources */,
+				24CC8C4C18FACFF80000181C /* ShowAddressDetail.png in Resources */,
 				24757E1018D593CD006D2D16 /* Main_iPhone.storyboard in Resources */,
 				24757E0718D593CD006D2D16 /* InfoPlist.strings in Resources */,
+				24CC8C4818FACF590000181C /* AddAddressBookDetail.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
